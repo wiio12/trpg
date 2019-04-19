@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tab?>
+
+<Tab fx:id="tab" styleClass="showcaseTab" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="showcase.ShowcaseWindow">
+<content>
+
+<VBox stylesheets="/showcase/showcaseWindow.css" >
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" styleClass="controls">
+               <children>
+            <Region fx:id="resetButton" prefWidth="20.0" styleClass="resetButton" stylesheets="@showcaseWindow.css">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Region>
+                  <TextField fx:id="nameField" prefHeight="30.0" styleClass="nameField" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+            <Region fx:id="uploadButton" prefHeight="20.0" prefWidth="20.0" styleClass="uploadButton" stylesheets="@showcaseWindow.css">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Region>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Pane fx:id="imageExplorerContainer" onMouseClicked="#inputImage" styleClass="imageExplorerContainerActive" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </Pane>
+         </children>
+      </VBox>
+        </content>
+        </Tab>

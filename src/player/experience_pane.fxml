@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.ExperiencePane">
+        <children>
+
+
+            <TitledPane fx:id="titlePane" animated="false" text="调查员笔记">
+                <content>
+                    <VBox fx:id="experienceTitlePane" prefWidth="350">
+                       <children>
+                           <!--<ScrollPane fitToWidth="true" >-->
+                               <!--<content>-->
+                                   <VBox fx:id="experienceVBox">
+                                       <children>
+                                           <TableView fx:id="experienceTable" prefHeight="400.0" prefWidth="368.0">
+                                               <columns>
+   
+                                                   <TableColumn fx:id="moduleCol" prefWidth="104.79998475313187" sortable="false" text="经历模组" />
+                              <TableColumn fx:id="descriptionCol" prefWidth="245.5999786376953" sortable="false" text="描述" />
+   
+   
+                                               </columns>
+                                           </TableView>
+                                           <HBox fx:id="editHBox" prefWidth="200.0">
+                                               <children>
+                                                   <TextField fx:id="moduleTextField" prefHeight="27.0" prefWidth="89.0" promptText="模组名称">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </TextField>
+                              <TextField fx:id="descriptionTextField" layoutX="10.0" layoutY="10.0" prefHeight="27.0" promptText="描述" />
+                                                   <Button mnemonicParsing="false" onAction="#handleAdd" prefWidth="50.0" text="添加">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </Button>
+                                                   <Button mnemonicParsing="false" onAction="#handleDelete" prefWidth="50.0" text="删除">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </Button>
+                                               </children>
+                                           </HBox>
+                                       </children>
+                     <VBox.margin>
+                        <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0" />
+                     </VBox.margin>
+                                   </VBox>
+                       </children>
+                            <!--</content>-->
+                        <!--</ScrollPane>-->
+                    </VBox>
+                </content>
+            </TitledPane>
+        </children>
+    </HBox>

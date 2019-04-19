@@ -1,0 +1,56 @@
+.photoPane{
+    -fx-start-margin: 10,10,10,10;
+    -fx-border-color: #dadada;
+    -fx-border-radius: 1;
+    -fx-border-width: 2px;
+}
+
+.textMessageLeft{
+    -fx-background-color: #dadada;
+    -fx-background-radius: 5;
+}
+
+.textMessageRight{
+    -fx-background-color: #a2d1da;
+    -fx-background-radius: 5;
+}
+
+.selectableTextMessageRight {
+    -fx-background-radius: 5;
+}
+
+.selectableTextMessageRight .content{
+    -fx-padding: 9 9 0 9;
+    -fx-background-radius: 5;
+    -fx-background-color: #a2d1da;
+}
+
+.selectableTextMessageRight:focused .content{
+    -fx-background-color: #a2d1da;
+}
+
+.selectableTextMessageLeft {
+    -fx-background-radius: 5;
+}
+
+.selectableTextMessageLeft .content{
+    -fx-padding: 9 9 0 9;
+    -fx-background-radius: 5;
+    -fx-background-color: #dadada;
+}
+
+.selectableTextMessageLeft:focused .content{
+    -fx-background-color: #dadada;
+}
+
+.text-area:focused {
+    -fx-background-color: transparent;
+    -fx-highlight-fill: rgb(185, 215, 251);
+}
+
+.text-area {
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-highlight-fill: none;
+}

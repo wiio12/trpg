@@ -1,0 +1,94 @@
+.createButton {
+    -fx-background-color: transparent;
+    -fx-border-color: #b0b0b0;
+    -fx-border-radius: 20;
+    -fx-text-fill: #b0b0b0;
+}
+
+.createButton:hover{
+    -fx-background-color: #b0b0b0;
+    -fx-background-radius: 20;
+    -fx-text-fill: #dadada;
+}
+
+.addButton {
+    -fx-background-color: transparent;
+    -fx-border-color: #83aec0;
+    -fx-border-radius: 20;
+    -fx-text-fill: #83aec0;
+}
+
+.addButton:hover{
+    -fx-background-color: #83aec0;
+    -fx-background-radius: 20;
+    -fx-text-fill: #dadada;
+}
+
+.playerNameTextField {
+    -fx-background-color: transparent;
+    -fx-border-color: #dadada;
+    -fx-border-radius: 20;
+    -fx-text-fill: #dadada;
+}
+
+.bigVBox {
+    -fx-background-color: rgba(0,0,0,0.1);
+    -fx-background-radius: 10;
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+}
+
+.personVBox {
+    -fx-border-radius: 2;
+    -fx-background-color: rgba(70, 70, 70, 0.5);
+}
+
+.nameLabel {
+    -fx-text-fill: #dadada;
+}
+
+.joinVBox {
+    -fx-background-color: rgba(0,0,0,0.2);
+    -fx-background-radius: 10;
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+}
+
+.addRegion {
+    -fx-shape: "M500,10C229.4,10,10,229.4,10,500c0,270.6,219.4,490,490,490c270.6,0,490-219.4,490-490C990,229.4,770.6,10,500,10z M500,913.4C271.7,913.4,86.6,728.3,86.6,500S271.7,86.6,500,86.6S913.4,271.7,913.4,500S728.3,913.4,500,913.4z  M560.3,256H437.8v183.8H254v122.5h183.8V746h122.5V562.2H744V439.7H560.3V256z";
+    -fx-background-color: #dadada;
+}
+
+
+.scrollBar > .viewport {
+    -fx-background-color: transparent;
+}
+
+.addBigVBox {
+    -fx-background-color: rgba(0,0,0,0.1);
+    -fx-background-radius: 10;
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+}
+
+.addBigVBox:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+}
+
+.closeRegion{
+    -fx-shape: "M4565.2,5009.1c-632.3-61.4-1213.5-229.2-1774.2-513.6C1350.3,3769,384.5,2418.4,136.8,793.6C87.7,468.2,87.7-231.6,136.8-557c83.9-542.3,233.3-1027.3,466.6-1493.8c499.3-998.6,1242.1-1739.4,2238.7-2232.6c699.9-343.8,1371.1-499.3,2169.1-497.3c808.3,2.1,1481.6,161.7,2189.6,517.8c497.3,251.7,892.2,536.1,1268.7,912.7c376.5,376.5,661,771.5,912.7,1268.7c245.6,489.1,401.1,984.3,480.9,1534.8c45,302.9,49.1,976.1,10.2,1258.5c-153.5,1119.4-628.2,2093.4-1393.6,2862.9c-753.1,757.2-1723,1246.2-2783.1,1403.8C5439,5017.3,4814.8,5033.7,4565.2,5009.1z M3165.4,2387.7c24.6-12.3,448.2-423.6,939.3-914.7L5001,578.7l904.5,904.5c982.3,978.2,949.5,951.6,1135.7,916.8c100.3-18.4,223-141.2,241.5-241.5c34.8-186.2,61.4-153.5-916.8-1133.7l-904.5-906.5L6366-786.2c978.2-982.2,951.6-949.5,916.8-1135.7c-18.4-100.3-141.2-223-241.5-241.5c-186.2-34.8-153.5-61.4-1133.7,916.8L5001-342.1l-904.5-904.5c-982.3-978.2-949.5-951.6-1135.7-916.8c-100.3,18.4-223,141.2-241.5,241.5c-34.8,186.2-61.4,153.5,916.8,1135.7l904.5,904.5l-904.5,906.5c-974.1,976.1-951.6,947.5-918.8,1127.5C2754.1,2342.7,2999.7,2471.6,3165.4,2387.7z";
+    -fx-background-color: #dadada;
+}
+
+.closeRegion:hover{
+    -fx-background-color: #ffffff;
+}
+
+.backButton {
+    -fx-shape: "M500,9.6C229.4,9.6,10,229.2,10,500c0,270.8,219.4,490.4,490,490.4c270.6,0,490-219.5,490-490.4C990,229.2,770.6,9.6,500,9.6z M606.5,711.8c11.6,11.6,12.8,29.2,2.6,39.3c-10.2,10.1-27.9,8.9-39.5-2.6L341.8,523.1c-6.6-6.6-9.7-15-9.4-23c-0.4-8,2.8-16.6,9.4-23.2l227.9-225.3c11.6-11.6,29.3-12.8,39.5-2.6c10.2,10.1,9,27.7-2.6,39.3L392.3,500L606.5,711.8z";
+    -fx-background-color: #dadada;
+}
+
+.backButton:hover{
+    -fx-background-color: #ffffff;
+}

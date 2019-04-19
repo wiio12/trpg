@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.small.SkillTemplate">
+
+        <children>
+            <Label fx:id="nameLabel" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" styleClass="propertyNameLabel" text="会计学" wrapText="true">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+            </Label>
+            <TextField fx:id="textField" alignment="CENTER" layoutX="50.0" prefHeight="50.0" prefWidth="50.0" styleClass="propertyValueTextField" />
+            <VBox layoutX="100.0">
+                <children>
+                    <Label fx:id="labelUp" alignment="CENTER" prefHeight="25.0" prefWidth="50.0" styleClass="propertyValueLabelUp" text="0">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </Label>
+                    <Label fx:id="labelDown" alignment="CENTER" prefHeight="25.0" prefWidth="50.0" styleClass="propertyValueLabelDown" text="0">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </Label>
+                </children>
+            </VBox>
+        </children>
+        <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+        </HBox.margin>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>

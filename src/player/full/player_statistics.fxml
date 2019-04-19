@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="700.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" prefViewportWidth="1350.0" prefWidth="1350.0" vbarPolicy="NEVER">
+            <content>
+                <AnchorPane prefHeight="1910.0" prefWidth="1350.0">
+                    <children>
+                        <Pane layoutX="958.0" layoutY="669.0">
+                            <children>
+                                <fx:include fx:id="assetPane" source="../asset_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="35.0" layoutY="1439.0">
+                            <children>
+                                <fx:include fx:id="companionPane" source="../companion_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="231.0" layoutY="11.0">
+                            <children>
+                                <fx:include fx:id="playerInfo" source="../player_info_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="597.0" layoutY="12.0">
+                            <children>
+                                <fx:include fx:id="statusPane" source="../status_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="34.0" layoutY="1039.0">
+                            <children>
+                                <fx:include fx:id="itemPane" source="../item_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="960.0" layoutY="1440.0">
+                            <children>
+                                <fx:include fx:id="cthulhuPane" source="../cthulhu_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="960.0" layoutY="367.0">
+                            <children>
+                                <fx:include fx:id="fightPane" source="../fight_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="959.0" layoutY="914.0">
+                            <children>
+                                <fx:include fx:id="experiencePane" source="../experience_pane.fxml" />
+                            </children>
+                        </Pane>
+                        <Pane>
+                            <children>
+                                <fx:include fx:id="headerPane" source="../header_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="961.0" layoutY="13.0">
+                            <children>
+                                <fx:include fx:id="propertyPane" source="../property_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="34.0" layoutY="695.0">
+                            <children>
+                                <fx:include fx:id="weaponPane" source="../weapon_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="424.0" layoutY="1041.0">
+                            <children>
+                                <fx:include fx:id="backgroundPane" source="../background_pane.fxml" />
+                            </children>
+                        </Pane>
+
+                        <Pane layoutX="34.0" layoutY="252.0">
+                            <children>
+                                <fx:include fx:id="skillTablePane" source="skill_table_pane.fxml" />
+                            </children>
+                        </Pane>
+                        <HBox layoutX="591.0" layoutY="183.0" prefHeight="67.0" prefWidth="368.0">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Roll" />
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                  <HBox alignment="CENTER" layoutX="498.0" layoutY="1893.0" prefWidth="350.0">
+                     <children>
+                        <Button fx:id="btn_save" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="保存">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_cancel" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="取消">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</HBox>

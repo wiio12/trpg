@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<HBox stylesheets="/chat/player_dialog_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.PlayerDialogLeft">
+    <children>
+
+        <!--头像框-->
+        <StackPane alignment="TOP_CENTER" maxHeight="45.0" maxWidth="45.0" styleClass="photoPane">
+            <children>
+                <ImageView fx:id="avatar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@02.png" />
+                    </image>
+                </ImageView>
+            </children>
+            <FlowPane.margin>
+                <Insets />
+            </FlowPane.margin>
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="8.0" />
+            </HBox.margin>
+        </StackPane>
+        <!--头像框-->
+
+
+        <!--文字框-->
+        <BorderPane fx:id="msgBox">
+            <top>
+                <!--名字-->
+                <Label fx:id="playerName" styleClass="playerName" text="Player 1">
+                    <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="7.0" />
+                    </BorderPane.margin>
+                </Label>
+            </top>
+            <left>
+                <!--信息-->
+                <Label fx:id="msgText" alignment="CENTER" maxWidth="260.0" styleClass="textMessageLeft" wrapText="true" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Label>
+            </left>
+        </BorderPane>
+        <!--文字框-->
+
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <VBox.margin>
+        <Insets />
+    </VBox.margin>
+</HBox>
