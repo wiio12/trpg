@@ -2,6 +2,8 @@ package player.full;
 
 import info.character.Fight;
 import info.character.Resources;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -45,6 +47,20 @@ public class PlayerStatistics implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         scrollPane.setVvalue(0.0);
+
+        scrollPane.vvalueProperty().addListener(new ChangeListener<Number>() {
+            private boolean flag = true;
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+                if(flag) {
+                    scrollPane.setVvalue(0);
+                    flag = false;
+                }
+                if((double)t1 - (double)number > 0.1){
+                    scrollPane.setVvalue((double)number);
+                }
+            }
+        });
 
         initializePane(paneStatus);
 
