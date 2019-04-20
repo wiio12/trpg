@@ -89,7 +89,7 @@ public class Resources implements Serializable {
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
             objectOut.writeObject(resourcesMap);
             objectOut.close();
-            System.out.println("The <Object>  was succesfully written to a file");
+            System.out.println("The <Cards>  was successfully written to a file");
 
             for(CharacterResourcesChangeListener c : characterResourcesChangeListeners){
                 c.onCharacterResourcesChange();
@@ -107,10 +107,10 @@ public class Resources implements Serializable {
             resourcesMap = (Map<String, Resources>) objectIn.readObject();
             objectIn.close();
             resourceCount = resourcesMap.size();
-            System.out.println("The <Object>  was succesfully read from a file");
+            System.out.println("The <Cards>  was successfully read from a file");
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.err.println("The <Cards> read failed");
         }
     }
 

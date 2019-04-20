@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.WeaponPane">
+        <children>
+            <TitledPane fx:id="titlePane" animated="false" text="武器">
+                <content>
+                    <VBox fx:id="weaponTitlePane" prefHeight="300.0" prefWidth="900.0">
+                       <children>
+                           <!--<ScrollPane fitToWidth="true" >-->
+                               <!--<content>-->
+                                   <VBox fx:id="weaponVBox">
+                                       <children>
+                                           <TableView fx:id="weaponTable">
+                                               <columns>
+   
+                                                   <TableColumn fx:id="weaponNameCol" prefWidth="100.0" sortable="false" text="武器名称" />
+                                                   <TableColumn fx:id="weaponTypeCol" prefWidth="75.0" sortable="false" text="类型" />
+                                                   <TableColumn fx:id="weaponSkillCol" prefWidth="75.0" sortable="false" text="使用技能" />
+                                                   <TableColumn fx:id="sR1Col" minWidth="-1.0" prefWidth="25.0" resizable="false" sortable="false" text="成" />
+                                                   <TableColumn fx:id="sR2Col" prefWidth="25.0" resizable="false" sortable="false" text="功" />
+                                                   <TableColumn fx:id="sR3Col" maxWidth="-Infinity" minWidth="25.0" prefWidth="25.0" resizable="false" text="率" />
+                                                   <TableColumn fx:id="damageCol" prefWidth="75.0" text="伤害" />
+                                                   <TableColumn fx:id="basicRangeCol" prefWidth="75.0" text="基础射程" />
+                                                   <TableColumn fx:id="penetrateCol" prefWidth="75.0" text="贯穿" />
+                                                   <TableColumn fx:id="timesCol" prefWidth="75.0" text="每次轮数" />
+                                                   <TableColumn fx:id="loadAmountCol" prefWidth="75.0" text="装弹量" />
+                                                   <TableColumn fx:id="functionalityCol" prefWidth="75.0" text="故障值" />
+   
+                                               </columns>
+                                           </TableView>
+                                           <HBox fx:id="editHBox" alignment="CENTER_RIGHT" prefWidth="200.0">
+                                               <children>
+                                                   <TextField fx:id="weaponNameTextField" prefHeight="27.0" prefWidth="125.0" promptText="武器名称">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </TextField>
+                                                   <ComboBox fx:id="weaponTypeComboBox" prefHeight="27.0" prefWidth="125.0" promptText="武器类型">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </ComboBox>
+                                                   <Button mnemonicParsing="false" onAction="#handleEquip" prefWidth="50.0" text="装备">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </Button>
+                                                   <Button mnemonicParsing="false" onAction="#handleDrop" prefWidth="50.0" text="丢弃">
+                                                       <HBox.margin>
+                                                           <Insets />
+                                                       </HBox.margin>
+                                                   </Button>
+                                               </children>
+                                           </HBox>
+                                       </children>
+                     <VBox.margin>
+                        <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0" />
+                     </VBox.margin>
+                                   </VBox>
+                       </children>
+                            <!--</content>-->
+                        <!--</ScrollPane>-->
+                    </VBox>
+                </content>
+            </TitledPane>
+        </children>
+    </HBox>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!--调查员信息-->
+<!--调查员信息-->
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.PlayerInfoPane">
+        <children>
+            <TitledPane fx:id="titlePane" animated="false" contentDisplay="CENTER" text="调查员信息">
+                <content>
+                    <VBox prefWidth="350.0">
+                        <children>
+
+                            <!--姓名行-->
+                            <HBox alignment="CENTER_LEFT">
+                                <children>
+                                    <Label text="姓名">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="name" prefHeight="27.0" prefWidth="184.0" />
+                        <Label text="性别">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="gender" prefHeight="27.0" prefWidth="75.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                            <!--姓名行-->
+
+                            <HBox alignment="CENTER_LEFT">
+                                <children>
+                                    <Label text="玩家">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="playerName" prefHeight="27.0" prefWidth="159.0" />
+                                    <Label text="年代">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                        <ComboBox fx:id="years" prefHeight="27.0" prefWidth="99.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT">
+                                <children>
+                                    <Label text="职业">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="profession" prefHeight="27.0" prefWidth="184.0" />
+                                    <Label text="年龄">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="age" prefHeight="27.0" prefWidth="75.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT">
+                                <children>
+                                    <Label text="住地">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="address" prefHeight="27.0" prefWidth="295.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT">
+                                <children>
+                                    <Label text="故乡">
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="hometown" prefHeight="27.0" prefWidth="295.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                        </children>
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                    </VBox>
+                </content>
+            </TitledPane>
+        </children>
+        <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </VBox.margin>
+    </HBox>

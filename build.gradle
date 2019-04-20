@@ -1,6 +1,6 @@
 plugins {
-    id 'java'
     id 'application'
+    id 'java'
     id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
@@ -8,8 +8,30 @@ plugins {
 group 'indi.wiio'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 11
-mainClassName = 'indi.wiio.main.App'
+sourceCompatibility = '11'
+mainClassName = 'indi.wiio.App'
+
+sourceSets {
+    main {
+        java {
+            srcDir('src/main/java/')
+        }
+        resources {
+            srcDir('src/main/resources/')
+
+        }
+    }
+
+    test {
+        java {
+            srcDir('src/test/java')
+        }
+        resources {
+            srcDir('src/test/resources')
+
+        }
+    }
+}
 
 repositories {
     mavenCentral()

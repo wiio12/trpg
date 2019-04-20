@@ -1,9 +1,8 @@
 package indi.wiio.start;
 
 
-import indi.wiio.main.App;
+import indi.wiio.App;
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -16,7 +15,6 @@ import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 import indi.wiio.main.KpMainWindowPane;
-import indi.wiio.network.client.Client;
 import indi.wiio.network.client.ClientMain;
 import indi.wiio.network.client.UserStatusListener;
 
@@ -52,7 +50,7 @@ public class CreateRoomPane implements Initializable {
                         }
                     }
 
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/start/online_person.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/start/online_person.fxml"));
                     Parent parent = null;
                     try {
                         parent = fxmlLoader.load();
@@ -83,7 +81,7 @@ public class CreateRoomPane implements Initializable {
 
         btn_player.setOnAction(actionEvent -> {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/start/card_chose_pane.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/start/card_chose_pane.fxml"));
                 Parent parent = fxmlLoader.load();
                 CardChosePane cardChosePane = fxmlLoader.getController();
                 cardChosePane.setCreateRoomPane(this);
@@ -100,7 +98,7 @@ public class CreateRoomPane implements Initializable {
             try {
                 ClientMain.setKeeper(true);
                 ClientMain.getClient().sendSelf();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/kp_main_window_pane.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main/kp_main_window_pane.fxml"));
                 Parent parent = fxmlLoader.load();
                 KpMainWindowPane kpMainWindowPane = fxmlLoader.getController();
                 App.setKpMainWindowPane(kpMainWindowPane);

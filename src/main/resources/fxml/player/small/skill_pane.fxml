@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--技能表部分-->
+
+<?import javafx.geometry.Insets?>
+
+<!--技能表部分-->
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.small.SkillPane">
+    <children>
+        <TitledPane animated="false" text="技能表">
+            <content>
+                <VBox prefHeight="520" prefWidth="350">
+                   <children>
+                       <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefViewportHeight="1810.0" prefViewportWidth="350.0" vbarPolicy="NEVER">
+                           <content>
+                               <FlowPane fx:id="skillFlowPane">
+
+                            </FlowPane>
+                           </content>
+                     <VBox.margin>
+                        <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0" />
+                     </VBox.margin>
+                       </ScrollPane>
+                   </children>
+                </VBox>
+            </content>
+        </TitledPane>
+    </children>
+    <VBox.margin>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </VBox.margin>
+</HBox>

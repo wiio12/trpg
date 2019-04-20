@@ -56,7 +56,7 @@ public class ChatPane implements Initializable {
     }
 
     public DialogPanel addChatTab(String tabName) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../resources/indi/wiio/layouts/chat/dialog_panel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/chat/dialog_panel.fxml"));
         Parent scrollTab = null;
         try {
             scrollTab = fxmlLoader.load();
@@ -95,7 +95,7 @@ public class ChatPane implements Initializable {
 
     public void handleSendR(){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../resources/indi/wiio/layouts/chat/player_dialog_right.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/chat/player_dialog_right.fxml"));
             Parent rightDialog = fxmlLoader.load();
             PlayerDialogRight playerDialog = fxmlLoader.getController();
             String msg = msgTextArea.getText().trim();
@@ -124,7 +124,7 @@ public class ChatPane implements Initializable {
 
     public void handleSendL(String fromUser, String msg){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../resources/indi/wiio/layouts/chat/player_dialog_left.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/chat/player_dialog_left.fxml"));
             Parent leftDialog= fxmlLoader.load();
             PlayerDialogLeft playerDialog = fxmlLoader.getController();
 

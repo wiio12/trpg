@@ -19,7 +19,7 @@ public class Self implements Serializable {
 
     private transient StringProperty name = new SimpleStringProperty();
 
-    private File profilePhotoFile = new File("user/default/default_profile.jpg");
+    private File profilePhotoFile = new File(getClass().getResource("/image/profilePhoto.jpg").toString());
     private transient Image profilePhoto = new Image(profilePhotoFile.toURI().toString());
 
     public static void writeMapToFile(){
@@ -43,10 +43,10 @@ public class Self implements Serializable {
             ObjectInputStream objectIn = new ObjectInputStream(fileIn);
             self = (Self) objectIn.readObject();
             objectIn.close();
-            System.out.println("Self  was succesfully read from a file");
+            System.out.println("Self  was successfully read from a file");
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.err.println("self.ser read failed");
         }
     }
 

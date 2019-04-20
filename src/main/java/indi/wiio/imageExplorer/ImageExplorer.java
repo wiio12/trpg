@@ -95,7 +95,7 @@ public class ImageExplorer {
             imageView.setCursor(Cursor.OPEN_HAND);
         });
 
-        mainStage.getScene().getStylesheets().add(this.getClass().getResource("style.css").toExternalForm());
+        mainStage.getScene().getStylesheets().add(this.getClass().getResource("/css/imageExplorer/style.css").toExternalForm());
 
         return this.imageRegion;
     }

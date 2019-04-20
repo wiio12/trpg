@@ -75,7 +75,7 @@ public class SkillPane implements Initializable {
 
 
         for(Skill s: skills){
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/small/skill_template.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/small/skill_template.fxml"));
             Parent pane = fxmlLoader.load();
             skillFlowPane.setPrefWrapLength(350);
             skillFlowPane.setVgap(5);

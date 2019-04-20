@@ -31,10 +31,10 @@ public class MainWindowPane implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Platform.runLater(()->{
-            VBox box = new RichText().initialize(((Stage) sp_richTextContainer.getScene().getWindow()));
-            sp_richTextContainer.getChildren().add(box);
+//            VBox box = new RichText().initialize(((Stage) sp_richTextContainer.getScene().getWindow()));
+//            sp_richTextContainer.getChildren().add(box);
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/player/small/player_statistics_small.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/small/player_statistics_small.fxml"));
             Parent parent = null;
             PlayerStatisticsSmall playerStatisticsSmall = new PlayerStatisticsSmall(PaneStatus.SMALL);
             fxmlLoader.setController(playerStatisticsSmall);

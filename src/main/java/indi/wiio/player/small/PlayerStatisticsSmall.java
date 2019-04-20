@@ -68,7 +68,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeItem() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/item_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/item_pane.fxml"));
         Parent parent = fxmlLoader.load();
         itemPane = fxmlLoader.getController();
         itemPane.setPlayerStatisticsSmall(this);
@@ -78,7 +78,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeExperience() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/experience_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/experience_pane.fxml"));
         Parent parent = fxmlLoader.load();
         experiencePane = fxmlLoader.getController();
         experiencePane.setPlayerStatisticsSmall(this);
@@ -88,7 +88,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeCthulhu() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/cthulhu_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/cthulhu_pane.fxml"));
         Parent parent = fxmlLoader.load();
         cthulhuPane = fxmlLoader.getController();
         cthulhuPane.setPaneStatus(paneStatus);
@@ -100,7 +100,7 @@ public class PlayerStatisticsSmall implements Initializable {
 
     @SuppressWarnings("Duplicates")
     private void initializeCompanion() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/companion_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/companion_pane.fxml"));
         Parent parent = fxmlLoader.load();
         companionPane = fxmlLoader.getController();
         companionPane.setPlayerStatisticsSmall(this);
@@ -110,7 +110,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeBackground() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/background_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/background_pane.fxml"));
         Parent parent = fxmlLoader.load();
         backgroundPane = fxmlLoader.getController();
         backgroundPane.setPlayerStatisticsSmall(this);
@@ -120,7 +120,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeAsset() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/asset_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/asset_pane.fxml"));
         Parent parent = fxmlLoader.load();
         assetPane = fxmlLoader.getController();
         assetPane.setPlayerStatisticsSmall(this);
@@ -130,7 +130,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeHeader() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/header_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/header_pane.fxml"));
         Parent parent = fxmlLoader.load();
         headerPane = fxmlLoader.getController();
         headerPane.setPlayerStatisticsSmall(this);
@@ -140,7 +140,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeFight() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/fight_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/fight_pane.fxml"));
         Parent parent = fxmlLoader.load();
         fightPane = fxmlLoader.getController();
         fightPane.setPlayerStatisticsSmall(this);
@@ -150,7 +150,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializePlayerInfo() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/player_info_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/player_info_pane.fxml"));
         Parent parent = fxmlLoader.load();
         playerInfoPane = fxmlLoader.getController();
         playerInfoPane.setPlayerStatisticsSmall(this);
@@ -160,7 +160,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeWeapon() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/weapon_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/weapon_pane.fxml"));
         Parent parent = fxmlLoader.load();
         weaponPane = fxmlLoader.getController();
         weaponPane.setPlayerStatisticsSmall(this);
@@ -171,7 +171,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeSkill() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/small/skill_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/small/skill_pane.fxml"));
         Parent parent = fxmlLoader.load();
         skillPane = fxmlLoader.getController();
         skillPane.setPlayerStatisticsSmall(this);
@@ -183,7 +183,7 @@ public class PlayerStatisticsSmall implements Initializable {
 
 
     private void initializeStatus() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/status_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/status_pane.fxml"));
         Parent parent = fxmlLoader.load();
         statusPane = fxmlLoader.getController();
         statusPane.setKp_userName(kp_userName);
@@ -194,7 +194,7 @@ public class PlayerStatisticsSmall implements Initializable {
     }
 
     private void initializeProperty() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../../../../resources/indi/wiio/layouts/player/property_pane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/property_pane.fxml"));
         Parent parent = fxmlLoader.load();
         propertyPane = fxmlLoader.getController();
         propertyPane.setPlayerStatisticsSmall(this);

@@ -120,7 +120,7 @@ public class StartPane implements Initializable {
         }
         try {
             Self.writeMapToFile();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/start/server_list_pane.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/start/server_list_pane.fxml"));
             Parent parent = fxmlLoader.load();
             ServerListPane serverListPane = fxmlLoader.getController();
             serverListPane.setCreateRoomPaneParentPair(createRoomPaneParentPair);

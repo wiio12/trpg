@@ -105,7 +105,7 @@ public class CardPane implements Initializable {
             try {
                 ClientMain.getClient().sendSelf();
                 ClientMain.getClient().requestPlayerStatistic();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/main_window_pane.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main/main_window_pane.fxml"));
                 Parent parent = fxmlLoader.load();
                 MainWindowPane mainWindowPane = fxmlLoader.getController();
                 ((Stage)btn_start.getScene().getWindow()).setScene(new Scene(parent));

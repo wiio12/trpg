@@ -1,13 +1,10 @@
 package indi.wiio.showcase;
 
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.control.Tooltip;
 import indi.wiio.network.client.ClientMain;
 
 import java.io.IOException;
@@ -47,7 +44,7 @@ public class ShowcaseTabs implements Initializable {
             showcaseItem.setImage(image);
             Platform.runLater(()->{
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("showcaseWindow.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/fxml/showcase/showcaseWindow.fxml"));
                     Tab newTab = null;
                     newTab = fxmlLoader.load();
                     showcaseTabPane.getTabs().add(1, newTab);
@@ -66,7 +63,7 @@ public class ShowcaseTabs implements Initializable {
     }
 
     private void addTab() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("showcaseWindow.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/fxml/showcase/showcaseWindow.fxml"));
         Tab newTab = fxmlLoader.load();
         showcaseTabPane.getTabs().add(1, newTab);
         showcaseTabPane.getSelectionModel().select(1);

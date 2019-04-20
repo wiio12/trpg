@@ -48,7 +48,7 @@ public class CardChosePane implements Initializable {
             String key = Resources.addResources();
             Resources.setMainResource(key);
             try{
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/player/full/player_statistics.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/full/player_statistics.fxml"));
 
                 PlayerStatistics playerStatistics = new PlayerStatistics(PaneStatus.EDIT_FULL);
                 playerStatistics.setMainResource(key);
@@ -60,7 +60,7 @@ public class CardChosePane implements Initializable {
                 stage.show();
 
             }catch (IOException ex){
-               System.out.println("load 不到啊");
+               ex.printStackTrace();
             }
         });
 
@@ -76,7 +76,7 @@ public class CardChosePane implements Initializable {
             System.out.println(k);
             Platform.runLater(()->{
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/start/card_pane.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/start/card_pane.fxml"));
                     CardPane cardPane = new CardPane(k);
                     fxmlLoader.setController(cardPane);
                     Parent parent = fxmlLoader.load();
