@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+
+<VBox fx:id="vb_card" alignment="TOP_CENTER" maxHeight="618.0" prefWidth="380.0" styleClass="addBigVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox.margin>
+        <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+    </HBox.margin>
+    <children>
+      <HBox fx:id="hb_close" alignment="TOP_RIGHT">
+         <children>
+            <Region fx:id="btn_delete" prefHeight="20.0" prefWidth="20.0" styleClass="closeRegion" stylesheets="@../../../../../java/indi/wiio/start/start_pane_style.css">
+               <HBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </Region>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+                <fx:include fx:id="headerPane" source="../player/header_pane.fxml" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+                <fx:include fx:id="playerInfoPane" source="../player/player_info_pane.fxml" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Region VBox.vgrow="ALWAYS" />
+      <HBox fx:id="hb_buttons" alignment="CENTER">
+         <children>
+            <Button fx:id="btn_edit" mnemonicParsing="false" prefWidth="100.0" styleClass="createButton" stylesheets="@../../../../../java/indi/wiio/start/start_pane_style.css" text="编辑">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btn_start" mnemonicParsing="false" prefWidth="100.0" styleClass="addButton" stylesheets="@../../../../../java/indi/wiio/start/start_pane_style.css" text="开始">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+    <effect>
+        <DropShadow />
+    </effect>
+</VBox>

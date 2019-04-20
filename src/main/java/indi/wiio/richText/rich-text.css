@@ -1,0 +1,32 @@
+.button.pressed { -fx-background-color: ghostwhite; }
+
+.button, .toggle-button {
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button.loadfile { -fx-background-image: url(resources/loadfile.png); }
+.button.savefile { -fx-background-image: url(resources/savefile.png); }
+.button.undo { -fx-background-image: url(resources/undo.png); }
+.button.redo { -fx-background-image: url(resources/redo.png); }
+.button.cut { -fx-background-image: url(resources/cut.png); }
+.button.copy { -fx-background-image: url(resources/copy.png); }
+.button.paste { -fx-background-image: url(resources/paste.png); }
+.button.bold { -fx-background-image: url(resources/bold.png); }
+.button.italic { -fx-background-image: url(resources/italic.png); }
+.button.underline { -fx-background-image: url(resources/underline.png); }
+.button.strikethrough { -fx-background-image: url(resources/strikethrough.png); }
+.button.insertimage { -fx-background-image: url(resources/insertimage.png); }
+
+.toggle-button.align-left { -fx-background-image: url(resources/align-left.png); }
+.toggle-button.align-center { -fx-background-image: url(resources/align-center.png); }
+.toggle-button.align-right { -fx-background-image: url(resources/align-right.png); }
+.toggle-button.align-justify { -fx-background-image: url(resources/align-justify.png); }
+
+.imageWrap {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 5;
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}

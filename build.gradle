@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+
+group 'indi.wiio'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+mainClassName = 'indi.wiio.main.App'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'commons-io:commons-io:2.6'
+    compile group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.0'
+
+}
+
+javafx {
+    version = "11"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing' ]
+}
