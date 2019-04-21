@@ -278,7 +278,7 @@ public class RichText {
         vbox.getChildren().addAll(toolBar1, toolBar2, vsPane);
 
         this.mainStage = mainStage;
-        mainStage.getScene().getStylesheets().add(this.getClass().getResource("rich-text.css").toExternalForm());
+        mainStage.getScene().getStylesheets().add(this.getClass().getResource("/css/richText/rich-text.css").toExternalForm());
 
         return  vbox;
 

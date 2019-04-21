@@ -8,7 +8,7 @@ import java.io.File;
 
 public class EmptyLinkedImage implements LinkedImage {
 
-    private static Image empIcon = new Image("richText/resources/brokenImage.png");
+    private static Image empIcon = new Image("/image/richText/brokenImage.png");
 
     @Override
     public boolean isReal() {
@@ -23,7 +23,7 @@ public class EmptyLinkedImage implements LinkedImage {
     @Override
     public Node createNode() {
         ImageView result = new ImageView(empIcon);
-        System.out.println(new File("richText/resources/brokenImage.png").exists());
+        System.out.println(new File("/image/richText/brokenImage.png").exists());
         return result;
     }
 }

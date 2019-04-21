@@ -27,7 +27,7 @@ public class RealLinkedImage implements LinkedImage {
 
     private static double maxWidth = 80.0;
     private static double maxHeight = 60.0;
-    private static Image magIcon = new Image("richText/resources/magnify.png");
+    private static Image magIcon = new Image("image/richText/magnify.png");
 
     private final String imagePath;
 
