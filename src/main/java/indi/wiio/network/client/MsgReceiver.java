@@ -2,8 +2,10 @@ package indi.wiio.network.client;
 
 import java.io.*;
 import java.nio.ByteBuffer;
+import java.util.Date;
 import java.util.List;
 
+import indi.wiio.info.ChatMessage;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import org.apache.commons.io.FileUtils;
@@ -166,9 +168,16 @@ public class MsgReceiver extends Thread{
 	private void handleMsg(String[] tokens) {
 		String user = tokens[1];
 		String msgBody = tokens[2];
+		String [] names = StringUtils.split(user, '@');
+		String topicName = names[0];
+		String userName = names[1];
+
+		ChatMessage chatMessage =
+				new ChatMessage(topicName,userName , msgBody, null, new Date(), ChatMessage.MessageType.left);
+
 		List<MsgListener> msgListeners = client.getMsgListeners();
 		for(MsgListener m : msgListeners) {
-			m.onReceivedMessage(user, msgBody);
+			m.onReceivedMessage(chatMessage);
 		}
 	}
 

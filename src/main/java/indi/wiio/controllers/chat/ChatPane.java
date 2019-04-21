@@ -1,5 +1,6 @@
 package indi.wiio.controllers.chat;
 
+import indi.wiio.info.ChatMessage;
 import indi.wiio.info.Others;
 import indi.wiio.info.Self;
 import indi.wiio.info.character.Resources;
@@ -20,6 +21,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class ChatPane implements Initializable {
@@ -32,8 +34,8 @@ public class ChatPane implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ClientMain.getClient().addMsgListener((fromUser, msgBody) -> {
-            Platform.runLater(()->handleSendL(fromUser, msgBody));
+        ClientMain.getClient().addMsgListener((chatMessage) -> {
+            Platform.runLater(()->handleSendL(chatMessage));
         });
 
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.SELECTED_TAB);
@@ -99,6 +101,8 @@ public class ChatPane implements Initializable {
             Parent rightDialog = fxmlLoader.load();
             PlayerDialogRight playerDialog = fxmlLoader.getController();
             String msg = msgTextArea.getText().trim();
+            if("".equalsIgnoreCase(msg)) return;
+
             if(ClientMain.isPlayer())
                 playerDialog.setName(Resources.getResources().getPlayerInfo().getName());
             else if(ClientMain.isKeeper())
@@ -114,6 +118,9 @@ public class ChatPane implements Initializable {
                 Univ.printErrMessage("topic not exist");
             }
 
+            ChatMessage chatMessage =
+                    new ChatMessage(tabName, Self.getSelf().getName(),msg,null,new Date(), ChatMessage.MessageType.right);
+
             // 服务器发送部分
             ClientMain.getClient().msg(tabName, msg);
 
@@ -122,30 +129,30 @@ public class ChatPane implements Initializable {
         }
     }
 
-    public void handleSendL(String fromUser, String msg){
+    public void handleSendL(ChatMessage message){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/chat/player_dialog_left.fxml"));
             Parent leftDialog= fxmlLoader.load();
             PlayerDialogLeft playerDialog = fxmlLoader.getController();
+//
+//            String [] names = StringUtils.split(fromUser, '@');
+//            String topicName = names[0];
+//            String userName = names[1];
 
-            String [] names = StringUtils.split(fromUser, '@');
-            String topicName = names[0];
-            String userName = names[1];
 
-
-            playerDialog.setAvatar(userName);
-            playerDialog.setUserName(userName);
-            System.out.println(Others.getOthersMap().get(userName));
-            System.out.println(Others.getOthersMap().get(userName).getResources());
-            System.out.println(Others.getOthersMap().get(userName).getResources().getPlayerInfo());
-            System.out.println(Others.getOthersMap().get(userName).getResources().getPlayerInfo().getName());
-            playerDialog.setName(Others.getOthersMap().get(userName).getResources().getPlayerInfo().getName());
+            playerDialog.setAvatar(message.getUserName());
+            playerDialog.setUserName(message.getUserName());
+//            System.out.println(Others.getOthersMap().get(userName));
+//            System.out.println(Others.getOthersMap().get(userName).getResources());
+//            System.out.println(Others.getOthersMap().get(userName).getResources().getPlayerInfo());
+//            System.out.println(Others.getOthersMap().get(userName).getResources().getPlayerInfo().getName());
+            playerDialog.setName(Others.getOthersMap().get(message.getUserName()).getResources().getPlayerInfo().getName());
             playerDialog.setChatPane(this);
-            playerDialog.setMsg(msg.trim());
+            playerDialog.setMsg(message.getMsgStr().trim());
 
-            Pair<DialogPanel, Parent> d = this.getDialogPanel(topicName);
+            Pair<DialogPanel, Parent> d = this.getDialogPanel(message.getTopicName());
             DialogPanel dialogPanel;
-            if( d == null) dialogPanel = addChatTab(topicName);
+            if( d == null) dialogPanel = addChatTab(message.getTopicName());
             else dialogPanel = d.getKey();
 
             if(!dialogPanel.isTabOpend()) reOpenTab(dialogPanel);

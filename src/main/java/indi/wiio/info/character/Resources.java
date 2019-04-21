@@ -43,6 +43,10 @@ public class Resources implements Serializable {
         resourceCount--;
     }
 
+    private static void addKeeper(){
+
+    }
+
     public static String addResources(){
         String resName = Self.getSelf().getName() + resourceCount;
         resourceCount ++;
