@@ -18,7 +18,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.effect.DropShadow?>
 
-<VBox stylesheets="/css/player/small/player_statistics_small_style.css" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.HeaderPane">
+<VBox stylesheets="/css/player/small/player_statistics_small_style.css" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.player.HeaderPane">
     <children>
 
     <!--头像-->

@@ -2,7 +2,7 @@ package indi.wiio;
 
 import indi.wiio.info.Others;
 import indi.wiio.info.Self;
-import indi.wiio.main.KpMainWindowPane;
+import indi.wiio.controllers.mainwindow.KpMainWindowPane;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +12,8 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import indi.wiio.network.client.ClientMain;
 import indi.wiio.network.server.ServerMain;
-import indi.wiio.start.CreateRoomPane;
-import indi.wiio.start.StartPane;
+import indi.wiio.controllers.start.CreateRoomPane;
+import indi.wiio.controllers.start.StartPane;
 
 import java.io.IOException;
 

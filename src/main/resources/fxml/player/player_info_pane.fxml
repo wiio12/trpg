@@ -11,7 +11,7 @@
 <!--调查员信息-->
 <!--调查员信息-->
 
-<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.PlayerInfoPane">
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.player.PlayerInfoPane">
         <children>
             <TitledPane fx:id="titlePane" animated="false" contentDisplay="CENTER" text="调查员信息">
                 <content>

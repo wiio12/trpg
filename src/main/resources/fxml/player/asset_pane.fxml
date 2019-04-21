@@ -7,7 +7,7 @@
 
 
 <HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="indi.wiio.player.AssetPane">
+      fx:controller="indi.wiio.controllers.player.AssetPane">
     <children>
         <TitledPane fx:id="titlePane" animated="false" text="资产">
             <content>

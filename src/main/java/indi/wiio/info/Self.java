@@ -92,31 +92,4 @@ public class Self implements Serializable {
         this.profilePhoto = profilePhoto;
     }
 
-    //    public static StringProperty nameProperty() {
-//        return name;
-//    }
-//
-//    public static String getName() {
-//        return name.get();
-//    }
-//
-//    public static void setName(String name) {
-//        Self.name.set(name);
-//    }
-//
-//    public static Image getProfilePhoto() {
-//        return profilePhoto;
-//    }
-//
-//    public static void setProfilePhoto(Image profilePhoto) {
-//        Self.profilePhoto = profilePhoto;
-//    }
-//
-//    public static File getProfilePhotoFile() {
-//        return profilePhotoFile;
-//    }
-//
-//    public static void setProfilePhotoFile(File profilePhotoFile) {
-//        Self.profilePhotoFile = profilePhotoFile;
-//    }
 }

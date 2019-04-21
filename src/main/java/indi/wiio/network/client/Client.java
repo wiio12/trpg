@@ -5,7 +5,7 @@ import indi.wiio.info.Self;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
-import indi.wiio.showcase.ShowcaseItem;
+import indi.wiio.controllers.showcase.ShowcaseItem;
 
 import javax.imageio.ImageIO;
 import java.io.*;

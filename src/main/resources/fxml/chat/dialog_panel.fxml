@@ -9,7 +9,7 @@
 
 <ScrollPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="indi.wiio.chat.DialogPanel"
+            fx:controller="indi.wiio.controllers.chat.DialogPanel"
             prefHeight="400.0" prefWidth="600.0"
             fx:id="chatScrollPane" hbarPolicy="NEVER" styleClass="myScroll">
     <content>

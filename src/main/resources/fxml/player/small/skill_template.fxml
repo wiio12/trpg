@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.small.SkillTemplate">
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.player.small.SkillTemplate">
 
         <children>
             <Label fx:id="nameLabel" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" styleClass="propertyNameLabel" text="会计学" wrapText="true">

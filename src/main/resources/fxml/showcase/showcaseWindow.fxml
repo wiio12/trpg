@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Tab?>
 
-<Tab fx:id="tab" styleClass="showcaseTab" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.showcase.ShowcaseWindow">
+<Tab fx:id="tab" styleClass="showcaseTab" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.showcase.ShowcaseWindow">
 <content>
 
 <VBox stylesheets="/css/showcase/showcaseWindow.css" >

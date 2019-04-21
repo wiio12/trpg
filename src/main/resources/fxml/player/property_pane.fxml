@@ -14,7 +14,7 @@
 
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.PropertyPane">
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.player.PropertyPane">
     <children>
         <TitledPane fx:id="titlePane" animated="false" text="属性">
             <content>

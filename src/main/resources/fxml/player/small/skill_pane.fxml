@@ -13,7 +13,7 @@
 
 <!--技能表部分-->
 
-<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.small.SkillPane">
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.player.small.SkillPane">
     <children>
         <TitledPane animated="false" text="技能表">
             <content>

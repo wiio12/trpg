@@ -15,7 +15,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" styleClass="personVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.start.OnlinePerson">
+<VBox alignment="CENTER" styleClass="personVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.start.OnlinePerson">
         <children>
             <StackPane styleClass="imageStackPane">
                 <children>

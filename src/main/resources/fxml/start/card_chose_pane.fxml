@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane stylesheets="/css/start/start_pane_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.start.CardChosePane">
+<StackPane stylesheets="/css/start/start_pane_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.start.CardChosePane">
     <children>
         <ImageView fitHeight="720.0" fitWidth="1200.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
             <image>

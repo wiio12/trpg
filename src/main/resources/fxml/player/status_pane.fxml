@@ -11,7 +11,7 @@
 <!--状态面板-->
 <!--状态面板-->
 
-<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.player.StatusPane">
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.player.StatusPane">
 
     <children>
         <TitledPane fx:id="titlePane" animated="false" text="状态">

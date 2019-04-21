@@ -13,7 +13,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 
-<HBox stylesheets="/css/chat/player_dialog_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.chat.PlayerDialogRight">
+<HBox stylesheets="/css/chat/player_dialog_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indi.wiio.controllers.chat.PlayerDialogRight">
     <children>
         <Region HBox.hgrow="ALWAYS" />
 
