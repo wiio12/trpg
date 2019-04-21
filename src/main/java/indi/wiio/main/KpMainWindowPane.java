@@ -60,7 +60,7 @@ public class KpMainWindowPane implements Initializable {
     }
 
     private void addPlayerTab(String userName) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/player/small/player_statistics_small.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/small/player_statistics_small.fxml"));
         Parent parent = null;
         PlayerStatisticsSmall playerStatisticsSmall = new PlayerStatisticsSmall(PaneStatus.KP);
         playerStatisticsSmall.setKp_userName(userName);

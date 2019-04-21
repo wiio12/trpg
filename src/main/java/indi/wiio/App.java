@@ -24,33 +24,24 @@ public class App extends Application {
     private static KpMainWindowPane kpMainWindowPane;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Self.getSelf().setName("");
+
+        //TODO: 修改这些监听器的位置，这里感觉不好
         ClientMain.getClient().addOthersMessageListener((userName, filePath) -> {
             Others.readFromFile(userName, filePath);
-            if(ClientMain.isKeeper() && kpMainWindowPane != null){
-                Platform.runLater(()-> kpMainWindowPane.refreshPlayerTab());
+            if (ClientMain.isKeeper() && kpMainWindowPane != null) {
+                Platform.runLater(() -> kpMainWindowPane.refreshPlayerTab());
             }
         });
         ClientMain.getClient().addOthersRequestListener(user -> {
-           // boolean isWrited = Others.writeMySelfToFile();
+            // boolean isWrited = Others.writeMySelfToFile();
             try {
                 ClientMain.getClient().sendSelf();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
-
-
-
-//        StackPane pane = new StackPane();
-//        Scene scene = new Scene(pane, 600,800);
-//        primaryStage.setScene(scene);
-//        VBox box = new RichText().initialize(primaryStage);
-//        pane.getChildren().add(box);
-//        primaryStage.setTitle("Hello World");
-//
-//        primaryStage.show();
 
 
         fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/start/start_pane.fxml"));
@@ -62,13 +53,13 @@ public class App extends Application {
 
         StartPane startPane = fxmlLoader.getController();
         startPane.setParentStage(primaryStage);
-        startPane.setCreateRoomPaneParentPair(new Pair<>(createRoomPane,parent));
+        startPane.setCreateRoomPaneParentPair(new Pair<>(createRoomPane, parent));
         Scene scene = new Scene(root);
         startPane.setScene(scene);
 
         primaryStage.setOnCloseRequest(windowEvent -> {
             System.out.println("they quit!");
-            if(ClientMain.isLogin()){
+            if (ClientMain.isLogin()) {
                 try {
                     ClientMain.getClient().logout();
                 } catch (IOException e) {
@@ -82,33 +73,7 @@ public class App extends Application {
         primaryStage.show();
 
 
-
-
-
-
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/main_window_pane.fxml"));
-//        Parent parent = fxmlLoader.load();
-//        Stage stage = new Stage();
-//        stage.setScene(new Scene(parent));
-//        stage.show();
-
-//
-//
-//
-//        //TODO:前后台控制分离！！！！
-        // 这里直接调用了controller里面的handleSendL。
-//        ClientMain.getClient().addMsgListener(this::handleMsg);
-//        handleMsg("#COMMON@ben", "23333");
-
-        //
-
     }
-
-//    private void handleMsg(String fromUser , String msg) {
-//        mainChatPane = fxmlLoader.getController();
-//        Platform.runLater(()-> mainChatPane.handleSendL(fromUser, msg));
-//
-//    }
 
 
     public static void main(String[] args) {
