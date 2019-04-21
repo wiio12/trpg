@@ -83,7 +83,7 @@ public class CardPane implements Initializable {
             Resources.setupAllRelation();
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/player/full/player_statistics.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/player/full/player_statistics.fxml"));
                 PlayerStatistics playerStatistics = new PlayerStatistics(PaneStatus.EDIT_FULL);
                 playerStatistics.setMainResource(mainRes);
                 fxmlLoader.setController(playerStatistics);
